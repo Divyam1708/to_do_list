@@ -16,7 +16,7 @@ let delete_button_enable_counter=new String();
 let store_str_1= new String();
 
 
-text_input.addEventListener('keypress',(event_1)=>{
+text_input.addEventListener('keydown',(event_1)=>{
 
 
 
