@@ -16,9 +16,13 @@ let delete_button_enable_counter=new String();
 let store_str_1= new String();
 
 
-text_input.addEventListener('keydown',(event_1)=>{
+text_input.addEventListener('keypress',(event_1)=>{
+
+
+
     if(event_1.key!="Enter"){
-        store_str_1=store_str_1.concat(event_1.key);
+        // console.log(event_1.key);
+        store_str_1=text_input.value;
     }
     
     
@@ -47,7 +51,7 @@ text_input.addEventListener('keydown',(event_1)=>{
 
 
 
-    if(event_1.key=="Enter") {
+    if(event_1.key=="Enter" && store_str_1!=' ') {
 
 
 
