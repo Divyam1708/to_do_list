@@ -22,6 +22,7 @@ text_input.addEventListener('keydown',(event_1)=>{
 
     if(event_1.key!="Enter"){
         // console.log(event_1.key);
+        store_str_1=store_str_1.concat(' ');
         store_str_1=text_input.value;
     }
     
@@ -78,6 +79,8 @@ text_input.addEventListener('keydown',(event_1)=>{
             random_check_variable_inside_create_new_element_per_click="hello"
             delete_button_enable_counter=delete_button_enable_counter.concat(random_check_variable_inside_create_new_element_per_click);
             // }
+
+            saveData();
         }
         
         
@@ -102,6 +105,7 @@ text_input.addEventListener('keydown',(event_1)=>{
         cross_symbol.addEventListener('click',(cross_symbol_event)=>{
             console.log(new_element_add);
             new_element_add.remove('new_element_add');
+            saveData();
         })
         
         
@@ -129,6 +133,7 @@ cross_symbol.style.marginInline="0.2em";
 cross_symbol.display="inline";
   
 
+store_str_1=store_str_1.concat(' ');
 new_element_add.innerHTML=store_str_1;
 text_output.appendChild(new_element_add);
 new_element_add.appendChild(cross_symbol);
@@ -139,16 +144,29 @@ text_input.value=" "
 cross_symbol.addEventListener('click',(cross_symbol_event)=>{
     console.log(new_element_add);
     new_element_add.remove('new_element_add');
+    saveData();
 })
 
 new_element_add.addEventListener(('click'),(e)=>{
     new_element_add.classList.toggle(`checked`);
 })
 
-
+saveData();
 
 })
     
 delete_button.addEventListener('click',(event_1)=>{
     new_element_add.remove();
 })
+
+
+function saveData() {
+    localStorage.setItem("data",to_do_output_1.innerHTML);
+}
+
+function showData() {
+    to_do_output_1.innerHTML=localStorage.getItem("data");
+}
+
+
+showData();
