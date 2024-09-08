@@ -37,14 +37,16 @@ text_input.addEventListener('keydown',(event_1)=>{
         new_element_add.style.display="flex";
         new_element_add.style.justifyContent="space-between";
         new_element_add.style.alignItems="center";
+        new_element_add.style.fontSize="1.5em";
         
         
         let cross_symbol=document.createElement('div')
-        cross_symbol.style.backgroundColor="green";
-        cross_symbol.style.backgroundColor="1em";
+        cross_symbol.style.backgroundImage=`url("https://cdn-icons-png.flaticon.com/128/9790/9790368.png")`
+        cross_symbol.style.width="18px";
+        cross_symbol.style.height="18px";
+        cross_symbol.style.backgroundSize="cover";
         cross_symbol.style.cursor="pointer";
-        cross_symbol.style.paddingInline="0.2em";
-        cross_symbol.innerText="X";
+        cross_symbol.style.marginInline="0.2em";
         cross_symbol.display="inline";
 
 
@@ -89,6 +91,10 @@ text_input.addEventListener('keydown',(event_1)=>{
         }
         
         
+
+        new_element_add.addEventListener(('click'),(e)=>{
+            new_element_add.classList.toggle(`checked`);
+        })
         
         
         
@@ -110,15 +116,18 @@ let new_element_add=document.createElement('li');
 new_element_add.style.display="flex";
 new_element_add.style.justifyContent="space-between";
 new_element_add.style.alignItems="center";
+new_element_add.style.fontSize="1.5em";
 
 
 let cross_symbol=document.createElement('div')
-cross_symbol.style.backgroundColor="green";
-cross_symbol.style.backgroundColor="1em";
+cross_symbol.style.backgroundImage=`url("https://cdn-icons-png.flaticon.com/128/9790/9790368.png")`
+cross_symbol.style.width="18px";
+cross_symbol.style.height="18px";
+cross_symbol.style.backgroundSize="cover";
 cross_symbol.style.cursor="pointer";
-cross_symbol.style.paddingInline="0.2em";
-cross_symbol.innerText="X";
-cross_symbol.display="inline";   
+cross_symbol.style.marginInline="0.2em";
+cross_symbol.display="inline";
+  
 
 new_element_add.innerHTML=store_str_1;
 text_output.appendChild(new_element_add);
@@ -132,7 +141,9 @@ cross_symbol.addEventListener('click',(cross_symbol_event)=>{
     new_element_add.remove('new_element_add');
 })
 
-
+new_element_add.addEventListener(('click'),(e)=>{
+    new_element_add.classList.toggle(`checked`);
+})
 
 
 

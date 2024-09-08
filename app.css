@@ -12,7 +12,7 @@ button{
     all: unset;
 }
 .main_container{
-    width: 40em;
+    width: 70em;
     padding: 1em;
     margin: auto;
 }
@@ -33,7 +33,7 @@ button{
 }
 
 #first_text_area{
-    width: 15em;
+    width: 21em;
     text-wrap: wrap;
     resize: none;
     font-size: 2em;
@@ -52,9 +52,10 @@ button{
 
 .section_2_design{
     border: 2px solid rgb(33, 242, 33);
-    height: fit-content;
+    height: 75vh;
     margin-top: 1em;
     background-color: #34363b;
+    overflow-Y: scroll;
     /* display: */
 }
 
@@ -65,20 +66,23 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin-block: 0em;
+    /* visibility: hidden; */
 }
 
 #to_do_output_1 li{
     list-style: none;
     background-color: grey;
     margin-block: 0.5em;
-    width: 20em;
+    width: 30em;
+    font-size: 1.5em;
     position: relative;
 
 }
 #to_do_output_1 li.checked{
     text-decoration: line-through;
+    background-color: rgb(42, 153, 190);
 }
 
 #to_do_output_1 li::before{

@@ -1,0 +1,78 @@
+@media screen and (min-width:476px) and (max-width:850px) {
+    :root{
+        --text_color:wheat;
+        --background_colour: gray;
+    }
+    
+    body{
+        background-color: black;
+    }
+    
+    
+    button{
+        all: unset;
+    }
+    .main_container{
+        width: 38em;
+        padding: 1em;
+        margin: auto;
+    }
+    
+    .section_1_design{
+        border: 2px solid yellow;
+        height: 2em;
+        margin-top: 1em;
+        background-color: cadetblue;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .section_1_div_1_design{
+        /* background-color: rgb(255, 255, 255); */
+        display: flex;
+    
+    }
+    
+    #first_text_area{
+        width: 18em;
+        font-size: 1.5em;
+    }
+    
+    #input_button{
+        border: 1px solid black;
+        width: 2em;
+        padding-inline: 1em;
+        background-color: rgb(36, 118, 151);
+    
+    }
+    
+    .section_2_design{
+        border: 2px solid rgb(33, 242, 33);
+        height: 75vh;
+        margin-top: 1em;
+        background-color: #34363b;
+        overflow-Y: scroll;
+    }
+    
+    
+    #to_do_output_1{
+    }
+    
+    #to_do_output_1 li{
+        margin-block: 1em;
+        width: 20em;
+        font-size: 1.5em;
+        position: relative;
+        text-wrap: wrap;
+        /* overflow:auto; */
+    
+    }
+    #to_do_output_1 li.checked{
+    }
+    
+    #to_do_output_1 li::before{
+    }
+    
+    #to_do_output_1 li.checked::before{
+    }
+}
